@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/username"
+        android:inputType="text" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/btn_login2"
+            android:text="@string/register"
+            android:onClick="toRegister"
+            />
+
+        <Button
+            android:id="@+id/btn_login2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/login"
+            android:onClick="toMain"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/back_to_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/kembali"
+        android:onClick="toSplash"
+        android:layout_marginBottom="30dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/dafa_rizky_fahreza"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/_10119113"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/if_3"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/dibuat_pada_19_april_2022"
+        android:textSize="18sp"
+        />
+
+</LinearLayout>

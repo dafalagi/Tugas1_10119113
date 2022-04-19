@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_screen_activity"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/dafa_rizky_fahreza"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/_10119113"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/if_3"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/dibuat_pada_19_april_2022"
+        android:textSize="18sp"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keluar"
+            android:layout_marginEnd="10dp"
+            android:onClick="Exit"
+            android:backgroundTint="@color/design_default_color_error"
+            android:layout_toStartOf="@id/btn_login"
+            />
+
+        <Button
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:onClick="Login"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

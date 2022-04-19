@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Tugas1_10119113</string>
+    <string name="splash_screen_activity">Splash Screen Activity</string>
+    <string name="dafa_rizky_fahreza">Dafa Rizky Fahreza</string>
+    <string name="_10119113">10119113</string>
+    <string name="if_3">IF-3</string>
+    <string name="login">Login</string>
+    <string name="dibuat_pada_19_april_2022">Dibuat pada : 19 April 2022</string>
+    <string name="keluar">Keluar</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="kembali">Kembali</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="profil">Profil</string>
+    <string name="deskripsi_mahasiswa_teknik_informatika_unikom">Deskripsi : Mahasiswa Teknik Informatika UNIKOM</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="confirm_password">Confirm Password</string>
+</resources>
