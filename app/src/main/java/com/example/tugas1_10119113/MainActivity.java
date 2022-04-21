@@ -47,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 builder.setPositiveButton("Ya", (new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        finish();
-                        moveTaskToBack(true);
+                        Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.putExtra("EXIT", true);
+                        startActivity(intent);
                     }
                 }));
 

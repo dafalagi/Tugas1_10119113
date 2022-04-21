@@ -37,8 +37,10 @@ public class SplashActivity extends AppCompatActivity {
                 builder.setPositiveButton("Ya", (new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        finish();
-                        moveTaskToBack(true);
+                        Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.putExtra("EXIT", true);
+                        startActivity(intent);
                     }
                 }));
 
@@ -53,6 +55,12 @@ public class SplashActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+        if (getIntent().getBooleanExtra("EXIT", false)) {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            startActivity(intent);
+        }
 
     }
 }
