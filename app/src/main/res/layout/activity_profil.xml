@@ -73,16 +73,15 @@
             android:layout_height="wrap_content"
             android:text="@string/logout"
             android:layout_alignParentEnd="true"
-            android:onClick="Logout"
             />
         <Button
+            android:id="@+id/btn_exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/keluar"
             android:backgroundTint="@color/design_default_color_error"
             android:layout_toStartOf="@id/btn_logout"
             android:layout_marginEnd="10dp"
-            android:onClick="Exit"
             />
 
     </RelativeLayout>

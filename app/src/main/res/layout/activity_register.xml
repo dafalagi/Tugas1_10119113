@@ -45,21 +45,19 @@
         android:layout_marginBottom="30dp">
 
         <Button
-            android:id="@+id/register"
+            android:id="@+id/btn_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:text="@string/register"
-            android:onClick="toMain"
             />
 
         <Button
-            android:id="@+id/btn_login2"
+            android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toStartOf="@id/register"
+            android:layout_toStartOf="@id/btn_register"
             android:text="@string/login"
-            android:onClick="toLogin"
             android:layout_marginEnd="10dp"
             />
 

@@ -3,9 +3,11 @@ package com.example.tugas1_10119113;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 import android.os.Bundle;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,27 +15,54 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    public void Logout(View view) {
-        Intent logout = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(logout);
-    }
+        Button profil = findViewById(R.id.btn_profil);
 
-    public void Exit(View view) {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Keluar");
-        builder.setMessage("Apakah anda ingin keluar?");
-        builder.setPositiveButton("Ya", (dialogInterface, i) -> finish());
+        profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profil = new Intent(MainActivity.this, ProfilActivity.class);
+                startActivity(profil);
+            }
+        });
 
-        builder.setNegativeButton("Tidak", (dialogInterface, i) -> dialogInterface.dismiss());
+        Button logout = findViewById(R.id.btn_logout);
 
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profil = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(profil);
+            }
+        });
 
-    public void toProfil(View view) {
-        Intent profil = new Intent(MainActivity.this, ProfilActivity.class);
-        startActivity(profil);
+        Button exit = findViewById(R.id.btn_exit);
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Keluar");
+                builder.setMessage("Apakah anda ingin keluar?");
+                builder.setPositiveButton("Ya", (new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                        moveTaskToBack(true);
+                    }
+                }));
+
+                builder.setNegativeButton("Tidak", (new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                }));
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
     }
 }

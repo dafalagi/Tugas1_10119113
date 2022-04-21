@@ -5,26 +5,42 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.view.View;
 import android.os.Bundle;
+import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-    }
 
-    public void toSplash(View view) {
-        Intent splash = new Intent(LoginActivity.this, SplashActivity.class);
-        startActivity(splash);
-    }
+        Button login = findViewById(R.id.btn_login);
 
-    public void toRegister(View view) {
-        Intent reg = new Intent(LoginActivity.this, RegisterActivity.class);
-        startActivity(reg);
-    }
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
-    public void toMain(View view) {
-        Intent main = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(main);
+        Button register = findViewById(R.id.btn_register);
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button back = findViewById(R.id.back_to_splash);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, SplashActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

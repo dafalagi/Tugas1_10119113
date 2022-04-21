@@ -38,22 +38,20 @@
         android:layout_marginTop="30dp">
 
         <Button
-            android:id="@+id/register"
+            android:id="@+id/btn_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:layout_toStartOf="@id/btn_login2"
+            android:layout_toStartOf="@id/btn_login"
             android:text="@string/register"
-            android:onClick="toRegister"
             />
 
         <Button
-            android:id="@+id/btn_login2"
+            android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:text="@string/login"
-            android:onClick="toMain"
             />
 
     </RelativeLayout>
@@ -64,7 +62,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/kembali"
-        android:onClick="toSplash"
         android:layout_marginBottom="30dp"
         />
     <TextView
