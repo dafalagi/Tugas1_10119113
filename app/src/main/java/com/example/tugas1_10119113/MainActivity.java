@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent profil = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(profil);
+                Intent logout = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(logout);
             }
         });
 
@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 builder.setPositiveButton("Ya", (new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                         intent.putExtra("EXIT", true);
                         startActivity(intent);
                     }

@@ -47,28 +47,4 @@
         android:textSize="18sp"
         />
 
-    <RelativeLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/btn_exit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/keluar"
-            android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/design_default_color_error"
-            android:layout_toStartOf="@id/btn_login"
-            />
-
-        <Button
-            android:layout_alignParentEnd="true"
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            />
-    </RelativeLayout>
-
 </LinearLayout>

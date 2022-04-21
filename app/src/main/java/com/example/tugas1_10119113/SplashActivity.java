@@ -1,68 +1,38 @@
 package com.example.tugas1_10119113;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.view.View;
 import android.os.Bundle;
-import android.widget.Button;
+import android.os.Handler;
+import android.view.WindowManager;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
+    private static int SPLASH_SCREEN_TIME_OUT=2000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
 
-        Button login = findViewById(R.id.btn_login);
-
-        login.setOnClickListener(new View.OnClickListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                Intent login = new Intent(SplashActivity.this, LoginActivity.class);
-                startActivity(login);
+            public void run() {
+                Intent i=new Intent(SplashActivity.this,
+                        LoginActivity.class);
+                //Intent is used to switch from one activity to another.
+
+                startActivity(i);
+                //invoke the SecondActivity.
+
+                finish();
+                //the current activity will get finished.
             }
-        });
-
-        Button exit = findViewById(R.id.btn_exit);
-
-        exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(SplashActivity.this);
-                builder.setTitle("Keluar");
-                builder.setMessage("Apakah anda ingin keluar?");
-                builder.setPositiveButton("Ya", (new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        intent.putExtra("EXIT", true);
-                        startActivity(intent);
-                    }
-                }));
-
-                builder.setNegativeButton("Tidak", (new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                }));
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
-            }
-        });
-
-        if (getIntent().getBooleanExtra("EXIT", false)) {
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            startActivity(intent);
-        }
+        }, SPLASH_SCREEN_TIME_OUT);
 
     }
 }
