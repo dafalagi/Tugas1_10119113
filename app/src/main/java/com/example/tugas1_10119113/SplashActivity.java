@@ -24,13 +24,10 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 Intent i=new Intent(SplashActivity.this,
                         LoginActivity.class);
-                //Intent is used to switch from one activity to another.
 
                 startActivity(i);
-                //invoke the SecondActivity.
 
                 finish();
-                //the current activity will get finished.
             }
         }, SPLASH_SCREEN_TIME_OUT);
 
