@@ -38,3 +38,9 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 }
+/*
+Dafa Rizky Fahreza
+10119113
+IF-3
+Dibuat pada : 19 April 2022
+ */
